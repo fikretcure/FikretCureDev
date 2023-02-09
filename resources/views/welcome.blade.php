@@ -156,7 +156,8 @@
                 @foreach ($repos as $item)
                     <div class="col-md-4">
                         <div class="work-box">
-                            <a href="storage/repos/{{$item["name"]}}.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                            <a href="storage/repos/{{$item["name"]}}.jpg" data-gallery="portfolioGallery"
+                               class="portfolio-lightbox">
                                 <div class="work-img">
                                     <img src="storage/repos/{{$item["name"]}}.jpg" alt="" class="img-fluid">
                                 </div>
@@ -167,7 +168,7 @@
                                         <h2 class="w-title">{{$item["name"]}}</h2>
                                         <div class="w-more">
                                             <span
-                                                class="w-date">{{ \Carbon\Carbon::make($item["created_at"])->toDateTimeString() }}</span>
+                                                class="w-date">{{\Carbon\Carbon::parse($item["created_at"])->diffForHumans(now()) }}</span>
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
@@ -264,17 +265,18 @@
                                     </div>
                                     <div class="socials">
                                         <ul>
-                                            <li><a href="https://www.youtube.com/channel/UC_Cqwomu8Pfgzb7qjBE0leQ"><span class="ico-circle"><i
+                                            <li><a href="https://www.youtube.com/channel/UC_Cqwomu8Pfgzb7qjBE0leQ"><span
+                                                        class="ico-circle"><i
                                                             class="bi bi-youtube"></i></span></a></li>
-                                            <li><a href="https://www.instagram.com/fikretcuredev/"><span class="ico-circle"><i
+                                            <li><a href="https://www.instagram.com/fikretcuredev/"><span
+                                                        class="ico-circle"><i
                                                             class="bi bi-instagram"></i></span></a></li>
 
-                                            <li><a href="https://www.linkedin.com/in/fikretcure/"><span class="ico-circle"><i
+                                            <li><a href="https://www.linkedin.com/in/fikretcure/"><span
+                                                        class="ico-circle"><i
                                                             class="bi bi-linkedin"></i></span></a></li>
                                             <li><a href="https://github.com/fikretcure"><span class="ico-circle"><i
                                                             class="bi bi-github"></i></span></a></li>
-
-
 
 
                                         </ul>
