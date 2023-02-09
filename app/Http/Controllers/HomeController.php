@@ -20,9 +20,6 @@ class HomeController extends Controller
      */
     public function __invoke(): View|Factory|Application
     {
-
-
-
         $hero_bg = Storage::allFiles("public/hero_bg");
         $hero_bg = str()->afterLast(collect($hero_bg)->random(), "public/");
 
@@ -41,6 +38,5 @@ class HomeController extends Controller
             "about_bg" => $about_bg,
             "repos" => $repos,
         ]);
-
     }
 }
